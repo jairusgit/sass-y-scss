@@ -1,0 +1,10 @@
+$variable: 10px;
+
+.content {
+  $variable: 20px !global;
+  margin: $variable; //20px
+}
+
+.sidebar {
+  padding: $variable; //20px
+}

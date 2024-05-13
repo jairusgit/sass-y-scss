@@ -1,0 +1,12 @@
+:root {
+    --variable: brown;
+}
+
+.content {
+    --variable: white;
+    background-color: var(--variable); /* white */
+}
+
+.sidebar {
+    background-color: var(--variable); /* brown */
+}

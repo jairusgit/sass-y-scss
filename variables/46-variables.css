@@ -1,0 +1,15 @@
+:root {
+    --global-variable: brown;
+}
+
+.content {
+    --local-variable: white;
+    background-color: var(--global-variable);
+    color: var(--local-variable);
+}
+
+.sidebar {
+    background-color: var(--global-variable);
+    /* Esto fallará porque --local-variable no están en el ámbito: */
+    color: var(--local-variable);
+}

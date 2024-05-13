@@ -1,0 +1,11 @@
+$global-variable: 10px
+
+.content
+    $local-variable: 20px
+    margin: $global-variable
+    padding: $local-variable
+
+.sidebar
+    margin: $global-variable
+    // Esto fallará porque $local-variable no están en el ámbito:
+    padding: $local-variable
