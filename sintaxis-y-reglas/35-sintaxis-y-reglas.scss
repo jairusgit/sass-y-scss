@@ -1,0 +1,13 @@
+$padding: 12px;
+
+.post {
+    // Como esta llamada a max() solo una interpolación, será analizada como la función max() de css.
+    padding-left: max(#{$padding}, env(safe-area-inset-left));
+    padding-right: max(#{$padding}, env(safe-area-inset-right));
+}
+
+.sidebar {
+    // Como esta llamada a max() incluye una variable de Sass, será analizada como la función max() de SassScript.
+    padding-left: max($padding, 20px);
+    padding-right: max($padding, 20px);
+}

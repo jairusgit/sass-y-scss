@@ -1,0 +1,24 @@
+.alert {
+
+    /* Para añadir pseudo-clases al selector exterior */
+    &:hover {
+        font-weight: bold;
+    }
+
+    /* Para añadir un estilo al selector exterior en un determinado 
+    contexto (por ejemplo, un body con idioma de derecha a izquierda) */
+    [dir=rtl] & {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+
+    /* Como argumento para selectores de pseudo-clases */
+    :not(&) {
+        opacity: 0.8;
+    }
+
+    /* Con sufijos */
+    &__copy {
+        display: none;
+    }
+}

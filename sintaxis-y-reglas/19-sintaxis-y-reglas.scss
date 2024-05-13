@@ -1,0 +1,14 @@
+// Este comentario no aparecerá en CSS.
+
+/* Este comentario sí, salvo que el CSS esté comprimido. */
+
+/* Puede contener interpolación:
+ * 1 + 1 = #{1 + 1} */
+
+/*! Este comentario siempre aparecerá. */
+
+p /* Los comentarios en línea pueden ir en cualquier lugar
+   * donde esté permitido un espacio en blanco. */ .sans {
+    font: Helvetica, // Al igual que los comentarios de una línea.
+        sans-serif;
+}

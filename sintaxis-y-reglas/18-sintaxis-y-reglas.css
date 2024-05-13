@@ -1,0 +1,16 @@
+.alert:hover {
+    font-weight: bold;
+}
+
+[dir=rtl] .alert {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+:not(.alert) {
+    opacity: 0.8;
+}
+
+.alert__copy {
+    display: none;
+}

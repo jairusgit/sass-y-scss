@@ -1,0 +1,18 @@
+ul>li {
+    /* el elemento a ser afectado por la regla es el elemento de la derecha 
+    cuando tiene al de la izquierda como su padre */
+    list-style-type: none;
+}
+
+h2+p {
+    /* referencia al elemento de la derecha 
+    cuando es inmediatamente precedido por el de la izquierda */
+    border-top: 1px solid gray;
+}
+
+p~span {
+    /* referencia al elemento de la derecha pero no necesita 
+    estar precediendo de inmediato al elemento de la izquierda 
+    y más de un elemento puede ser afectado */
+    opacity: 0.8;
+}

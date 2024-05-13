@@ -1,0 +1,8 @@
+/* Este comentario sí, salvo que el CSS esté comprimido. */
+
+/* Puede contener interpolación:
+ * 1 + 1 = #{1 + 1} */
+/*! Este comentario siempre aparecerá. */
+p .sans {
+    font: Helvetica, sans-serif;
+}
