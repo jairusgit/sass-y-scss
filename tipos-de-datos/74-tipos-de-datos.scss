@@ -1,0 +1,16 @@
+@debug 1px == 2px; // false
+@debug 1px == 1px; // true
+@debug 10px < 3px; // false
+@debug comparable(100px, 3in); // true (tiene uniddaes compatibles para operar con ellas)
+
+@debug true and true; // true
+@debug true and false; // false
+
+@debug true or false; // true
+@debug false or false; // false
+
+@debug not true; // false
+@debug not false; // true
+
+@debug if(true, 10px, 30px); // 10px
+@debug if(false, 10px, 30px); // 30px

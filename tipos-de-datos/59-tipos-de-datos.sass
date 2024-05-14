@@ -1,0 +1,14 @@
+$transition-speed: 1s/50px
+
+@mixin move($left-start, $left-stop)
+  position: absolute
+  left: $left-start
+  transition: left ($left-stop - $left-start) * $transition-speed
+
+  &:hover
+    left: $left-stop
+
+
+
+.slider
+  @include move(10px, 120px)

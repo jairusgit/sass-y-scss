@@ -1,0 +1,35 @@
+$font-weights: ("regular": 400, "medium": 500, "bold": 700);
+
+@debug map-get($font-weights, "medium"); // 500
+@debug map-get($font-weights, "extra-bold"); // null
+
+$light-weights: ("lightest": 100, "light": 300);
+$heavy-weights: ("medium": 500, "bold": 700);
+
+@debug map-merge($light-weights, $heavy-weights);
+// (
+//   "lightest": 100,
+//   "light": 300,
+//   "medium": 500,
+//   "bold": 700
+// )
+
+$font-weights: ("regular": 400, "medium": 500, "bold": 700);
+
+@debug map-merge($font-weights, ("extra-bold": 900));
+// ("regular": 400, "medium": 500, "bold": 700, "extra-bold": 900)
+
+$font-weights: ("regular": 400, "medium": 500, "bold": 700);
+
+@debug map-merge($font-weights, ("medium": 600));
+// ("regular": 400, "medium": 600, "bold": 700)
+
+$prefixes-by-browser: ("firefox": moz, "safari": webkit, "ie": ms);
+
+@mixin add-browser-prefix($browser, $prefix) {
+  $prefixes: map-merge($prefixes-by-browser, ($browser: $prefix));
+}
+
+@include add-browser-prefix("opera", o);
+@debug $prefixes-by-browser;
+// ("firefox": moz, "safari": webkit, "ie": ms, "opera": o)

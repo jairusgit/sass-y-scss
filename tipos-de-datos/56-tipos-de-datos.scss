@@ -1,0 +1,26 @@
+@debug 100; // 100
+@debug 0.8; // 0.8
+@debug 16px; // 16px
+
+@debug 5.2e3; // 5200
+@debug 6e-2; // 0.06
+
+@debug 4px * 6px; // 24px*px (serían "square pixels")
+@debug 5px / 2s; // 2.5px/s (serían "pixels per second")
+@debug 5px * 30deg / 2s / 24em; // 3.125px*deg/s*em, (serían "pixel-degrees per second-em")
+
+$degrees-per-second: 20deg/1s;
+@debug $degrees-per-second; // 20deg/s
+@debug 1 / $degrees-per-second; // 0.05s/deg
+
+// CSS define una pulgada (inch) como 96 pixeles.
+@debug 1in + 6px; // 102px or 1.0625in
+
+@debug 1in + 1s;
+//     ^^^^^^^^
+// Error: Incompatible units s and in.
+
+@debug 0.012345678912345; // 0.0123456789
+@debug 0.01234567891 == 0.01234567899; // true
+@debug 1.00000000009; // 1
+@debug 0.99999999991; // 1

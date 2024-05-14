@@ -1,0 +1,27 @@
+@debug "\""  // '"'
+@debug \.widget  // \.widget
+@debug "\a"  // "\a" (a string containing only a newline)
+@debug "line1\a line2"  // "line1\a line2" (foo and bar are separated by a newline)
+
+@debug "Helvetica Neue"  // "Helvetica Neue"
+@debug "C:\\Program Files"  // "C:\\Program Files"
+@debug "\"Don't Fear the Reaper\""  // "\"Don't Fear the Reaper\""
+@debug "line1\a line2"  // "line1\a line2"
+
+$roboto-variant: "Mono"
+@debug "Roboto #{$roboto-variant}"  // "Roboto Mono"
+
+@debug bold  // bold
+@debug -webkit-flex  // -webkit-flex
+@debug --123  // --123
+
+$prefix: ms
+@debug -#{$prefix}-flex  // -ms-flex
+
+@debug \21  // \!
+@debug \7Fx  // \7f x
+@debug str-length(\7Fx)  // 5
+
+@debug str-index("Helvetica Neue", "Helvetica")  // 1
+@debug str-index("Helvetica Neue", "Neue")  // 11
+@debug str-slice("Roboto Mono", -4)  // "Mono"

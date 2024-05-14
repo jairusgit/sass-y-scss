@@ -1,0 +1,9 @@
+.slider {
+    position: absolute;
+    left: 10px;
+    transition: left 2.2s;
+}
+
+.slider:hover {
+    left: 120px;
+}

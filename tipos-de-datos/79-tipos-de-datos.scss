@@ -1,0 +1,27 @@
+@debug str-index("Helvetica Neue", "Roboto"); // null
+@debug map-get(("large": 20px), "small"); // null
+@debug &; // null
+
+//Si la lista contiene un null, éste es omitido en el CSS generado
+$fonts: (
+    "serif": "Helvetica Neue",
+    "monospace": "Consolas"
+);
+
+h3 {
+    font: 18px bold map-get($fonts, "sans");
+}
+
+//Si el valor de la propiedad es null, la propiedad se omite por completo
+$fonts: (
+    "serif": "Helvetica Neue",
+    "monospace": "Consolas"
+);
+
+h3 {
+    font: {
+        size: 18px;
+        weight: bold;
+        family: map-get($fonts, "sans");
+    }
+}
