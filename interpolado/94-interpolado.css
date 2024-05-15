@@ -1,0 +1,19 @@
+.pulse {
+    animation-name: inline-u9mvd993f;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes inline-u9mvd993f {
+    from {
+        background-color: yellow;
+    }
+
+    to {
+        background-color: red;
+    }
+}
+
+.example {
+    content: string;
+}
