@@ -1,0 +1,39 @@
+@debug append(10px 20px, 30px); // 10px 20px 30px
+@debug append((blue, red), green); // blue, red, green
+@debug append(10px 20px, 30px 40px); // 10px 20px (30px 40px)
+@debug append(10px, 20px, $separator: comma); // 10px, 20px
+@debug append((blue, red), green, $separator: space); // blue red green
+
+@debug index(1px solid red, 1px); // 1
+@debug index(1px solid red, solid); // 2
+@debug index(1px solid red, dashed); // null
+
+@debug is-bracketed(1px 2px 3px); // false
+@debug is-bracketed([1px, 2px, 3px]); // true
+
+@debug join(10px 20px, 30px 40px); // 10px 20px 30px 40px
+@debug join((blue, red), (#abc, #def)); // blue, red, #abc, #def
+@debug join(10px, 20px); // 10px 20px
+@debug join(10px, 20px, $separator: comma); // 10px, 20px
+@debug join((blue, red), (#abc, #def), $separator: space); // blue red #abc #def
+@debug join([10px], 20px); // [10px 20px]
+@debug join(10px, 20px, $bracketed: true); // [10px 20px]
+
+@debug length(10px); // 1
+@debug length(10px 20px 30px); // 3
+@debug length((width: 10px, height: 20px)); // 2
+
+@debug list-separator(1px 2px 3px); // space
+@debug list-separator(1px, 2px, 3px); // comma
+@debug list-separator('Helvetica'); // space
+@debug list-separator(()); // space
+
+@debug nth(10px 12px 16px, 2); // 12px
+@debug nth([line1 line2 line3], -1); // line3
+
+@debug set-nth(10px 20px 30px, 1, 2em); // 2em 20px 30px
+@debug set-nth(10px 20px 30px, -1, 8em); // 10px, 20px, 8em
+@debug set-nth((Helvetica, Arial, sans-serif), 3, Roboto); // Helvetica, Arial, Roboto
+
+@debug zip(10px 50px 100px, short mid long); // 10px short, 50px mid, 100px long
+@debug zip(10px 50px 100px, short mid); // 10px short, 50px mid

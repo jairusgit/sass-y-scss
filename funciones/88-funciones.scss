@@ -1,0 +1,38 @@
+@debug feature-exists("at-error"); // true
+@debug feature-exists("unrecognized"); // false
+
+@debug function-exists("scale-color"); // true
+@debug function-exists("add"); // false
+
+@debug global-variable-exists("var1"); // false
+
+$var1: value;
+@debug global-variable-exists("var1"); // true
+
+@debug inspect(10px 20px 30px); // unquote("10px 20px 30px")
+@debug inspect(("width": 200px)); // unquote('("width": 200px)')
+@debug inspect(null); // unquote("null")
+@debug inspect("Helvetica"); // unquote('"Helvetica"')
+
+@debug mixin-exists("shadow-none"); // false
+
+@mixin shadow-none {
+    box-shadow: none;
+}
+
+@debug mixin-exists("shadow-none"); // true
+
+@debug type-of(10px); // number
+@debug type-of(10px 20px 30px); // list
+@debug type-of(()); // list
+
+@debug variable-exists("var1"); // false
+
+$var1: value;
+@debug variable-exists("var1"); // true
+
+h1 {
+    // $var2 is local.
+    $var2: value;
+    @debug variable-exists("var2"); // true
+}

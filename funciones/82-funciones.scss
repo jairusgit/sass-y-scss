@@ -1,0 +1,41 @@
+@debug abs(10px); // 10px
+@debug abs(-10px); // 10px
+
+@debug ceil(4); // 4
+@debug ceil(4.2); // 5
+@debug ceil(4.9); // 5
+
+@debug comparable(2px, 1px); // true
+@debug comparable(100px, 3em); // false
+@debug comparable(10cm, 3mm); // true
+
+@debug floor(4); // 4
+@debug floor(4.2); // 4
+@debug floor(4.9); // 4
+
+@debug max(1px, 4px); // 4px
+
+$widths: 50px, 30px, 100px;
+@debug max($widths...); // 100px
+
+@debug min(1px, 4px); // 1px
+
+$widths: 50px, 30px, 100px;
+@debug min($widths...); // 30px
+
+@debug percentage(0.2); // 20%
+@debug percentage(100px / 50px); // 200%
+
+@debug random(); // 0.2821251858
+@debug random(); // 0.6221325814
+
+@debug random(10); // 4
+@debug random(10000); // 5373
+
+@debug unit(100); // ""
+@debug unit(100px); // "px"
+@debug unit(5px * 10px); // "px*px"
+@debug unit(5px / 1s); // "px/s"
+
+@debug unitless(100); // true
+@debug unitless(100px); // false

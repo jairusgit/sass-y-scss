@@ -1,0 +1,41 @@
+$font-weights: ("regular": 400, "medium": 500, "bold": 700);
+
+@debug map-get($font-weights, "medium"); // 500
+@debug map-get($font-weights, "extra-bold"); // null
+
+$font-weights: ("regular": 400, "medium": 500, "bold": 700);
+
+@debug map-has-key($font-weights, "regular"); // true
+@debug map-has-key($font-weights, "bolder"); // false
+
+$font-weights: ("regular": 400, "medium": 500, "bold": 700);
+
+@debug map-keys($font-weights); // "regular", "medium", "bold"
+
+$light-weights: ("lightest": 100, "light": 300);
+$heavy-weights: ("medium": 500, "bold": 700);
+
+@debug map-merge($light-weights, $heavy-weights);
+// (
+//   "lightest": 100,
+//   "light": 300,
+//   "medium": 500,
+//   "bold": 700
+// )
+
+// map-merge() usado para añadir un par clave/valor.
+@debug map-merge($light-weights, ("lighter": 200));
+// ("lightest": 100, "light": 300, "lighter": 200)
+
+// map-merge() usado para sobre-escribir un valor.
+@debug map-merge($light-weights, ("light": 200));
+// ("lightest": 100, "light": 200)
+
+@debug map-remove($font-weights, "regular"); // ("medium": 500, "bold": 700)
+@debug map-remove($font-weights, "regular", "bold"); // ("medium": 500)
+@debug map-remove($font-weights, "bolder");
+// ("regular": 400, "medium": 500, "bold": 700)
+
+$font-weights: ("regular": 400, "medium": 500, "bold": 700);
+
+@debug map-values($font-weights); // 400, 500, 700

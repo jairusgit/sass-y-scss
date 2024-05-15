@@ -1,0 +1,28 @@
+@debug is-superselector("a", "a.disabled"); // true
+@debug is-superselector("a.disabled", "a"); // false
+@debug is-superselector("a", "sidebar a"); // true
+@debug is-superselector("sidebar a", "a"); // false
+@debug is-superselector("a", "a"); // true
+
+@debug selector-append("a", ".disabled"); // a.disabled
+@debug selector-append(".accordion", "__copy"); // .accordion__copy
+@debug selector-append(".accordion", "__copy, __image"); // .accordion__copy, .accordion__image
+
+@debug selector-extend("a.disabled", "a", ".link"); // a.disabled, .link.disabled
+@debug selector-extend("a.disabled", "h1", "h2"); // a.disabled
+
+@debug selector-nest("ul", "li"); // ul li
+@debug selector-nest(".alert, .warning", "p"); // .alert p, .warning p
+@debug selector-nest(".alert", "&:hover"); // .alert:hover
+@debug selector-nest(".accordion", "&__copy"); // .accordion__copy
+
+@debug selector-replace("a.disabled", "a", ".link"); // .link.disabled
+@debug selector-replace("a.disabled", "h1", "h2"); // a.disabled
+
+@debug selector-unify("a", ".disabled"); // a.disabled
+@debug selector-unify("a.disabled", "a.outgoing"); // a.disabled.outgoing
+@debug selector-unify("a", "h1"); // null
+@debug selector-unify(".warning a", "main a"); // .warning main a, main .warning a
+
+@debug compound-selectors("a.disabled"); // a, .disabled
+@debug compound-selectors("main.blog:after"); // main, .blog, :after
