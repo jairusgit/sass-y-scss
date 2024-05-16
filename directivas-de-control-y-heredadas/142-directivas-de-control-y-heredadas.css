@@ -1,0 +1,31 @@
+/* Ejemplo @if */
+.square-av {
+  width: 100px;
+  height: 100px;
+}
+
+.circle-av {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+/* Ejemplo @else */
+.banner {
+  background-color: #f2ece4;
+  color: #036;
+}
+body.dark .banner {
+  background-color: #6b717f;
+  color: #d2e1dd;
+}
+
+/* Ejemplo @elseif */
+.next {
+  height: 0;
+  width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 2.5px;
+  border-left-color: black;
+}

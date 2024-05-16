@@ -1,0 +1,32 @@
+//Ejemplo @namespace
+@namespace svg url(http://www.w3.org/2000/svg)
+
+//Ejemplo @font-face
+@font-face
+  font-family: "Open Sans"
+  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2")
+
+//Ejemplo @media sin argumentos
+.print-only
+  display: none
+
+  @media print
+    display: block
+
+//Ejemplo @media con argumentos
+$layout-breakpoint-small: 960px
+
+@media (min-width: $layout-breakpoint-small)
+  .hide-extra-small
+    display: none
+
+//Ejemplo @support (para compatibilidad de navegadores)
+@mixin sticky-position
+  position: fixed
+  @supports (position: sticky)
+    position: sticky
+
+
+
+.banner
+  @include sticky-position
