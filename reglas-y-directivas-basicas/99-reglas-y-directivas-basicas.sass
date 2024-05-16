@@ -1,0 +1,19 @@
+// foundation/_code.sass
+code
+  padding: .25em
+  line-height: 0
+
+// foundation/_lists.sass
+ul, ol
+  text-align: left
+
+  & &
+    padding:
+      bottom: 0
+      left: 0
+
+// foundation/_index.sass
+@import code, lists
+
+// style.sass
+@import foundation

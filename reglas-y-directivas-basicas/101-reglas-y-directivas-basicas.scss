@@ -1,0 +1,11 @@
+// _theme.scss
+pre,
+code {
+    font-family: 'Source Code Pro', Helvetica, Arial;
+    border-radius: 4px;
+}
+
+// style.scss
+.theme-sample {
+    @import "theme";
+}

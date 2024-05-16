@@ -1,0 +1,33 @@
+//Ejemplo sin argumentos
+@mixin hover {
+    &:not([disabled]):hover {
+        @content;
+    }
+}
+
+.button {
+    border: 1px solid black;
+
+    @include hover {
+        border-width: 2px;
+    }
+}
+
+//Ejemplo con argumentos
+@mixin media($types...) {
+    @each $type in $types {
+        @media #{$type} {
+            @content($type);
+        }
+    }
+}
+
+@include media(screen, print) using ($type) {
+    h1 {
+        font-size: 40px;
+
+        @if $type == print {
+            font-family: Calluna;
+        }
+    }
+}

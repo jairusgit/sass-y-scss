@@ -1,0 +1,9 @@
+@mixin inset-divider-offset($offset, $padding) {
+    $divider-offset: (
+        2 * $padding) + $offset;
+    @debug "divider offset: #{$divider-offset}";
+
+    margin-left: $divider-offset;
+    width: calc(100% - #{$divider-offset}
+);
+}

@@ -1,0 +1,52 @@
+//Argumentos obligatorios
+@function pow($base, $exponent) {
+    $result: 1;
+
+    @for $_ from 1 through $exponent {
+        $result: $result * $base;
+    }
+
+    @return $result;
+}
+
+.sidebar {
+    float: left;
+    margin-left: pow(4, 3) * 1px;
+}
+
+//Argumentos opcionales
+@function invert($color, $amount: 100%) {
+    $inverse: change-color($color, $hue: hue($color) + 180);
+    @return mix($inverse, $color, $amount);
+}
+
+$primary-color: #036;
+
+.header {
+    background-color: invert($primary-color, 80%);
+}
+
+//Argumentos con keywords
+$primary-color: #036;
+
+.banner {
+    background-color: $primary-color;
+    color: scale-color($primary-color, $lightness: +40%);
+}
+
+//Argumentos como listas
+@function min($numbers...) {
+    $min: null;
+
+    @each $number in $numbers {
+        @if $min == null or $number < $min {
+            $min: $number;
+        }
+    }
+
+    @return $min;
+}
+
+.micro {
+    width: min(50px, 30px, 100px);
+}

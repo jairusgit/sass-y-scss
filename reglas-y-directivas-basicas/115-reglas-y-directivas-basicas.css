@@ -1,0 +1,31 @@
+/* Argumentos obligatorios */
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: -2px;
+    margin-right: 2em;
+}
+
+/* Argumentos opcionales */
+.sidebar {
+    float: left;
+}
+
+[dir=rtl] .sidebar {
+    float: right;
+}
+
+/* Argumentos con keywords */
+.mail-icon {
+    text-indent: -99999em;
+    overflow: hidden;
+    text-align: left;
+    background-image: url("/images/mail.svg");
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+}

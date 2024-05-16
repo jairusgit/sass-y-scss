@@ -1,0 +1,21 @@
+/* Argumentos obligatorios */
+.sidebar {
+    float: left;
+    margin-left: 64px;
+}
+
+/* Argumentos opcionales */
+.header {
+    background-color: #523314;
+}
+
+/* Argumentos con keywords */
+.banner {
+    background-color: #036;
+    color: #0a85ff;
+}
+
+/* Argumentos como listas */
+.micro {
+    width: 30px;
+}

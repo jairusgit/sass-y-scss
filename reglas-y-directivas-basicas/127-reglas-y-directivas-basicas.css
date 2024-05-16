@@ -1,0 +1,20 @@
+/* Ejemplo 1 */
+.error,
+.error--serious {
+    border: 1px #f00;
+    background-color: #fdd;
+}
+
+.error--serious {
+    border-width: 3px;
+}
+
+/* Ejemplo 2 */
+.error:hover,
+.error--serious:hover {
+    background-color: #fee;
+}
+
+.error--serious {
+    border-width: 3px;
+}

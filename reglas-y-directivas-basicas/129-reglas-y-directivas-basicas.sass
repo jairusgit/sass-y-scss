@@ -1,0 +1,17 @@
+.alert
+  @extend .message.info
+  //      ^^^^^^^^^^^^^
+  // Error: Write @extend .message, .info instead.
+  @extend .main .info
+  //      ^^^^^^^^^^^
+  // Error: write @extend .info instead.
+@media screen and (max-width: 600px)
+  .error--serious
+    @extend .error
+    //      ^^^^^^
+    // Error: ".error" was extended in @media, but used outside it.
+
+
+.error
+  border: 1px #f00
+  background-color: #fdd

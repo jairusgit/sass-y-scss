@@ -1,0 +1,31 @@
+//Ejemplo 1
+@mixin unify-parent($child) {
+    @at-root #{selector-unify(&, $child)} {
+        @content;
+    }
+}
+
+.wrapper .field {
+    @include unify-parent("input") {
+        /* ... */
+    }
+
+    @include unify-parent("select") {
+        /* ... */
+    }
+}
+
+//Ejemplo 2
+@media print {
+    .page {
+        width: 8in;
+
+        @at-root (without: media) {
+            color: #111;
+        }
+
+        @at-root (with: rule) {
+            font-size: 1.2em;
+        }
+    }
+}

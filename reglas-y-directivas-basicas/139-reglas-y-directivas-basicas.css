@@ -1,0 +1,20 @@
+/* Ejemplo 1 */
+.wrapper input.field {
+  /* ... */
+}
+.wrapper select.field {
+  /* ... */
+}
+
+/* Ejemplo 2 */
+@media print {
+  .page {
+    width: 8in;
+  }
+}
+.page {
+  color: #111;
+}
+.page {
+  font-size: 1.2em;
+}

@@ -1,0 +1,22 @@
+@mixin reflexive-position($property, $value) {
+    @if $property !=left and $property !=right {
+        @error "La propiedad #{$property} debe ser left o right.";
+    }
+
+    $left-value: if($property ==right, initial, $value);
+    $right-value: if($property ==right, $value, initial);
+
+    left: $left-value;
+    right: $right-value;
+
+    [dir=rtl] & {
+        left: $right-value;
+        right: $left-value;
+    }
+}
+
+.sidebar {
+    @include reflexive-position(top, 12px);
+    //       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    // Error: La propiedad top debe ser left o right.
+}

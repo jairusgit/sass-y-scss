@@ -1,0 +1,21 @@
+// archivo foundation/_code.scss
+code {
+    padding: .25em;
+    line-height: 0;
+}
+
+// archivo foundation/_lists.scss
+ul,
+ol {
+    text-align: left;
+
+    & & {
+        padding: {
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
+
+// archivo style.scss
+@import 'foundation/code', 'foundation/lists';

@@ -1,0 +1,31 @@
+/*Ejemplo 1 */
+input.name {
+    position: absolute;
+    height: 150px;
+    margin-top: 0px;
+}
+
+input.address {
+    position: absolute;
+    height: 150px;
+    margin-top: 150px;
+}
+
+input.zip {
+    position: absolute;
+    height: 150px;
+    margin-top: 300px;
+}
+
+/* Ejemplo 2 */
+pre span.stx-string {
+    color: #080;
+}
+
+pre span.stx-comment {
+    color: #800;
+}
+
+pre span.stx-variable {
+    color: #60b;
+}

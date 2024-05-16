@@ -1,0 +1,15 @@
+code {
+    padding: .25em;
+    line-height: 0;
+}
+
+ul,
+ol {
+    text-align: left;
+}
+
+ul ul,
+ol ol {
+    padding-bottom: 0;
+    padding-left: 0;
+}

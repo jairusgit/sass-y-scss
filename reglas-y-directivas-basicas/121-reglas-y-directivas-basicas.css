@@ -1,0 +1,22 @@
+/*Ejemplo sin argumentos*/
+.button {
+    border: 1px solid black;
+}
+
+.button:not([disabled]):hover {
+    border-width: 2px;
+}
+
+/*Ejemplo con argumentos*/
+@media screen {
+    h1 {
+        font-size: 40px;
+    }
+}
+
+@media print {
+    h1 {
+        font-size: 40px;
+        font-family: Calluna;
+    }
+}
